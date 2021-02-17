@@ -1,0 +1,35 @@
+@media screen and (max-width:425px){
+.icon{
+	width:25px;
+	height:25px;
+}
+body{
+	display:flex;
+	flex-direction:column;
+}
+
+#pic{
+	width:100%;
+	
+}
+#pic img{
+	width:50%;
+	padding:15% 25% 0% 25%;
+	position:relative;
+	
+}
+#name{
+	color:black;
+	font-size:1.55rem;
+	}
+#phone,#email{
+	font-style:cursive;
+}
+#sidebar{
+	margin:auto;	
+}
+main{
+	background:rgba(0,0,0,0.6);
+	width:100%;
+}
+}

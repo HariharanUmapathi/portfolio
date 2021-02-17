@@ -1,0 +1,185 @@
+<html>
+    <head>
+        <title>Port Folio</title>
+        <script src='/dependencies/angular.js'></script>
+    </head>
+    <body>
+        <div id='main' ng-app='myapp' ng-controller='myctrl'>
+            <div id='title'>
+                <h1>Hariharan Umapathi</h1>
+                <h3>Web Developer | Programmer | Math Lover</h3>
+            </div>
+            <nav id='nav-bar'>
+                <li><a href='#about'>About</li>
+                <li><a href='#story'>Developer Story</a></li>
+                <li><a href='#resume'>Resume</a></li>
+                <li><a href='#portfolio'>Port Folio</a></li>
+            </nav>
+            <div id='profile'>
+                <img class='max-pic' src='' alt='Profile Picture'>
+            </div>
+            <div id='about'>
+                <span>"Hello world! this is Hariharan. "</span>
+                <h1>My Skills</h1>
+                <h3>Programming:<h3>
+<ul ><li ng-repeat="datum in data">{{ datum }}</li></ul>
+<div class="skills" >
+<div class="flex"><canvas id="c" width="200px" height="200px"></canvas>
+<div id="clab" class="lab"></div>
+<span>C</span></div> 
+
+<div class="flex"><canvas id="java" width="200px" height="200px"></canvas>
+<div id="javalab" class="lab"></div>
+<span>Java</span></div>
+
+<div class="flex">
+<canvas id="cpp" width="200px" height="200px"></canvas>
+<div id="cpplab" class="lab"></div>
+<span>CPP</span></div>
+
+<div class="flex">
+<canvas id="python" width="200px" height="200px"></canvas>
+<div id="pythonlab" class="lab"></div>
+<span>Python</span></div>
+
+<div class="flex">
+<canvas id="javaScript" width="200px" height="200px"></canvas>
+<div id="javaScriptlab" class="lab"></div>
+<span>JavaScript</span></div>
+<h3>Designing:</h3>
+<span>Adobe PhotoShop</span>
+<span>Inkscape </span>
+</div>
+
+</div>
+
+            </div>
+            <div id='#story'>
+                <h3>Story</h3>
+            </div>
+            <div id='#resume'>
+                <h3>Resume</h3>
+            </div>
+            <div id='#portfolio'>
+                <h3>Port Folio</h3>
+
+            </div>
+        </div>
+        <div class="footer">
+            <a href="https://www.facebook.com/hariharanhearts">Facebook</a>
+            <a href="https://www.twitter.com/itz_mr_evil">Twitter</a>
+            <a href="https://www.instagram.com/itz_mr_evil">Instagram</a><br>
+            <a href="https://www.linkedin.com/in/hariharanu/">Linkedin</a>
+            <a href="https://wa.me/+918807290807">Whatsapp</a>
+            <a href="https://t.me/itz_mr_evil">Telegram</a>
+            </div>
+        <style>
+            #main{
+                display:flex;
+                flex-direction: column;
+                width:90%;
+                align-items:center;
+                background:rgba(84, 87, 241, 0.13);
+                margin:auto;
+                
+            }
+            .lab{
+                position:relative;
+                z-index: inherit 9999;
+                font-size:35px;
+            }
+            .flex{
+                display:flex;
+                align-items:center;
+                justify-content: center;
+            }
+            .skills{
+                display:flex;
+                flex-wrap:wrap;
+                flex-direction:row;
+            }
+            #title{text-align:center;}
+            .max-pic{
+                width:200px;
+                height:200px;
+                border:20px solid white;
+                border-radius:10% 0% 10%;
+                box-shadow:0px 0px 15px black;
+                position:relative;
+                margin:20px 0px;
+                align-self:left;
+                z-index:99999 !important;
+            }
+            #nav-bar{
+                display:flex;
+            }
+            #nav-bar li
+            {
+                display:inline-block;
+                margin:0px 10px;
+            }
+        </style>
+        <script>
+            window.onloadend=load();
+            var time=0;
+            
+            function load()
+            {
+            var time=0;
+            var timer=setInterval(function(){
+            time++;
+            if(time==10)
+            clearInterval(timer);
+            change('c',Math.round(86*time/10));
+            change('java',Math.round(56*time/10));
+            change('cpp',Math.round(65*time/10));
+            change('python',Math.round(37*time/10));
+            change('javaScript',Math.round(50*time/10));
+            },60);
+            }
+            function rotate(canvasid,angle)
+            {
+            var canvas=document.getElementById(canvasid);
+            var context=canvas.getContext('2d');
+            
+            }
+            function change(canvasid,value)
+            {
+            var canvas=document.getElementById(canvasid);
+            var context=canvas.getContext('2d');
+            context.clearRect(0,0,canvas.width,canvas.height,false);
+            var x=canvas.width/2;
+            var y=canvas.height/2;
+            var radius=70;
+            var startAngle=0;
+            var endAngle=Math.PI*2*(value/100);
+            document.getElementById(canvasid+"lab").innerHTML=value+"%";
+            var counterClockwise=false;
+            context.beginPath();
+            context.arc(x,y,radius-5,0,Math.PI*2,counterClockwise);
+            context.strokeStyle='gray';
+            context.lineWidth=20;
+            context.stroke();
+            context.closePath();
+            context.beginPath();
+            context.arc(x,y,radius,startAngle,endAngle,counterClockwise);
+            context.strokeStyle='crimson';
+            context.lineWidth=15;
+            context.stroke();
+            context.closePath();
+            }
+            
+            </script>
+            <script>
+        
+                var app=angular.module("myapp",[]);
+                app.controller("myctrl",function($scope)
+                    {
+                   $scope.data=["C","C++","Java"];
+                });
+            </script>
+            
+                        
+    </body>
+</html>
+

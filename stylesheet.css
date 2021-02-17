@@ -1,0 +1,275 @@
+/*Common Styles*/
+:root{
+	--g1:linear-gradient(45deg,blue,dodgerblue);
+	--g2:linear-gradient(45deg,dodgerblue,blue);
+	--g3:linear-gradient(to left,green,orange,yellow,orange,green);
+	--g4:linear-gradient(72deg,red,orange,yellow,orange,green);
+}
+.cursive{
+	font-family:cursive;
+}
+.center{
+	text-align:center;
+}
+.card{
+	background:url("C:/Users/elcot/pictures/label.png");
+	background-size:100% auto;
+	background-position:0 35px;
+	background-repeat:no-repeat;
+	box-sizing:content-box;
+	box-shadow:none;
+	font-weight:900;
+	text-shadow:0px 0px 8px black;
+}
+main{
+height:100%;
+color:white;
+}
+.orange{
+	background:orange;
+	box-shadow:4px 5px 15px rgba(0,0,0,0.7);
+	width:110%;
+}
+.grad{
+	background:var(--g1);
+	box-shadow:0px 0px 15px black;
+	
+}
+.label{
+	font-size:1.5rem;
+	color:white;
+	
+	font-family:cursive;
+}
+#git:before{
+	content:"GitHub Profile: ";
+}
+#linkdin:before{
+	content:"LinkedIn";
+}
+#email:before{
+	content:"Email:";
+	font-weight:900;
+}
+#phone:before{
+content:"Phone:";
+font-weight:900;
+}
+div{
+}
+#name,#phone{
+	font-family:cursive;
+	}
+#jobtitle{
+		background:var(--g3);
+		border:2px solid white;
+		border-radius:20px;
+	}
+.svg{
+background:url("#polygon");	
+}
+body{
+		background:white;
+		margin:0px;
+	}
+b ul{
+	display:grid;
+	grid-template-columns:auto auto auto;
+	flex-wrap:wrap;
+	flex-direction:row;
+	justify-content:space-evenly;
+	}
+li{
+	display:inline-block;
+}
+header,footer{
+padding:10px 0px;
+position:fixed;	
+background:dodgerblue;
+width:100%;
+z-index:99999 !important;
+text-align:center;
+}
+header{
+	top:0px;
+}
+footer{
+bottom:0px;
+}		
+
+/*Mobile */
+/*Tablet*/
+@media screen and (min-width:769px) and  (max-width:1023px){
+	.card{	
+		background-size:20px 30px ; 
+	}
+	main{
+		margin:0px;
+		padding:0px;
+	}
+	#name{
+	font-size:2.2rem;
+	text-transform:uppercase;
+	}
+	#email,#jobtitle{
+		font-family:monospace;
+		font-size:5vw;
+		background:inherit;
+	}
+	#aboutme,#interest{
+		background:inherit;
+	}
+	div#sidebar{
+	background:var(--g2);
+	display:flex;
+	flex-direction:column;
+	justify-content:flex-start;
+	align-content:center;
+	margin:0px;
+	}
+	div#main{
+		margin:auto;
+			padding-left:20px;
+			border:10px solid white;
+			background:white;
+			color:black;
+			width:100%;
+			margin:0px;
+		}	
+	
+	.label:before{
+	content:"+";
+	font-weight:900;
+	position:relative;
+	right:100%;
+	}
+	.label{
+		width:100%;	
+	}
+	#pic{
+		margin:auto;
+		width:100px;
+		height:100px;
+		border-radius:50%;
+		border:2px solid white;
+		box-shadow:2px 5px 15px;
+	}
+	#pic img{
+		margin:auto;
+		width:inherit;
+		border-radius:50%;
+	}
+	
+
+div.content{
+		display:block;
+		text-align:left;
+		position:relative;
+		top:5px;
+		padding:10px;
+		
+	}
+div.edu{
+		text-align:left;
+	}
+div.sec{
+		font-weight:900;
+		font-style:cursive;
+	}
+	
+}
+
+/*Desktop */
+@media screen and (min-width:1024px){
+	header,footer{
+		display:none;
+		padding:0px;
+	}
+div#interest,div#aboutme{
+	width:570px;
+}
+body{
+	background:white;	
+	margin:0px;
+	}
+main{
+	display:grid;
+	margin:0px;
+	grid-template-columns:45% 55%;
+	}
+div#sidebar{
+	display:flex;
+	flex-direction:column;
+	justify-content:flex-start;
+	align-items:center;
+	min-width:512px;
+	background:var(--g1);
+	flex:1 1 100%;
+	}
+div#main{
+	display:block;
+	min-width:512px;
+	color:black;
+	padding:10px;
+	}
+.edu{
+display:grid;
+grid-template-rows:auto auto;
+}
+.content.edu{
+	
+}
+.data{
+	text-align:center;
+	background:dodgerblue;
+	padding:10px;
+	margin:10px;
+	border-radius:25px;
+}
+.sec{
+font-weight:900;
+text-decoration:underline;
+color:rgba(255,255,255,0.6);
+font-size:1.5rem;
+box-shadow:10px 1px 10px black;
+background-color:black;
+}
+.content{
+	padding-top:35px;
+	padding-bottom:25px;
+}
+ul{
+	display:flex;
+	flex-wrap:wrap;
+}
+li{ display:block;
+	padding:20px;
+}
+.label{
+	font-size:2.5rem;
+	display:flex;
+	align-items:center;
+}
+#name,#jobtitle{
+font-size:2.2rem;	
+font-family:cursive;
+}
+#email,#phone{
+	font-size:1.2rem;
+	font-family:monospace;
+}
+#pic{
+		max-width:250px;
+		min-width:200px;
+		border-radius:50%;
+		border:2px solid white;
+		box-shadow:2px 5px 15px;
+		padding:10px;
+		position:relative;
+	}
+#pic img{
+		margin:auto;
+		width:100%;
+		border-radius:50%;
+		}
+}
