@@ -1,0 +1,182 @@
+/* Style sheet for Index Page
+   Creation Date :19-02-2021				
+   Last Updated  :19-02-2021
+*/
+header
+{
+width:100%;
+position:fixed;
+top:0px;
+z-index:99999 !important;
+font-size:1rem;
+background:white;
+box-shadow:0px 0px 15px silver;
+}	  
+
+
+.description:before{
+		content:"Project Description";
+		display:block;
+		color:black;
+		}
+		.description{
+		color:gray;}
+		 body{margin:0px;}
+
+.footer
+{
+position:fixed;
+bottom:0px;
+width:100%;
+background:dodgerblue;	
+display:flex;
+flex-direction:row;
+justify-content:space-evenly;
+padding:5px;
+flex-wrap:wrap;
+}		
+.block{
+	padding:20px;
+	box-shadow:0px 0px 10px black;
+}
+.sideTag
+{
+	position:relative;
+	left:100%;
+	
+}	 
+.projects
+{
+display:flex;
+flex-wrap:wrap;
+flex:1 1 150px;
+}  
+@media screen and (min-width:320px) and (max-width:425px){	
+.projects{
+flex-direction:column;}
+.project{
+max-width:300px;
+width:max-content;
+}
+}
+.project{
+margin:20px;
+border:1px solid teal;
+padding:30px;
+max-width:320px;
+}
+	   #main{
+	   margin-top:45px;
+	   }
+            #main{
+                display:flex;
+                flex-direction: column;
+                width:90%;
+                align-items:center;
+                background:rgba(84, 87, 241, 0.13);
+                margin:auto;
+                
+            }
+            .lab{
+                position:relative;
+                z-index: 9999 !important;
+				left:60px;
+                font-size:35px;
+            }
+            .flex{
+                display:flex;
+				position:relative;
+                align-items:center;
+                justify-content: center;
+            }
+            .skills{
+                display:flex;
+				flex-direction:row;
+				flex-wrap:wrap;
+            }
+            #title{text-align:center;}
+            
+            #nav-bar{
+                
+            }
+            #nav-bar li
+            {
+                display:inline-block;
+                margin:0px 10px;
+            }
+			
+.hide{
+	display:none;
+}
+.show{
+		display:flex;
+	}
+	.max-pic{
+				
+                border:20px solid white;
+                border-radius:10% 0% 10%;
+                box-shadow:0px 0px 15px black;
+                position:relative;
+				margin:auto;
+				top:25px;
+            }
+			
+#about{
+	
+}			
+@media screen  and (max-width:425px){
+	
+	header{
+		font-size:2rem;
+		padding:10px;
+	}
+	header button{
+		font-size:1rem;
+		padding:2px;
+		border:none;
+	}
+	#title{
+		position:relative;
+		font-size:0.6rem;
+		font-family:cursive;
+		
+		
+		
+		margin-top:82px;
+		
+	}
+	#title h3{
+		margin:auto;
+		text-align:center;
+		width:100%;
+		padding:0px;
+	}
+	#nav-bar{
+		flex-direction:column;
+		position:relative;
+		border-radius:25px;
+		padding:10px;
+		margin:10px;
+		background:rgba(255,200,255,0.9);
+	}
+	#nav-bar li{
+		padding:10px;
+		margin:auto;
+		width:max-content;
+	}
+	div#profile {
+		margin:auto;
+		display:grid;
+		
+	}
+	img.max-pic{
+		max-width:240px;
+		min-width:150px;
+	}
+	#about{
+		margin-top:15px;
+		padding:10px;
+		position:relative;
+	}
+
+}

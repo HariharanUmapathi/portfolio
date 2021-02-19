@@ -1,28 +1,35 @@
 <html>
     <head>
         <title>Port Folio</title>
-        <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js'></script>
+		
+		<link href="index.css" rel="stylesheet"/>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+		<meta name="Author" content="Hariharan" />
+        <!--<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js'></script>-->
     </head>
     <body>
-        <div id='main' ng-app='myapp' ng-controller='myctrl'>
+	<header>
+	<div>Hariharan Umapathi</div>
+	<button style="background:transparent; border:none;font-style:bold;" onClick="menu()">Menu</button>
+	</header>
             <div id='title'>
-                <h1>Hariharan Umapathi</h1>
                 <h3>Web Developer | Programmer | Math Lover</h3>
             </div>
-            <nav id='nav-bar'>
-                <li><a href='#about'>About</li>
+            <nav id='nav-bar' >
+                <li><a href='#about'>About</a></li>
                 <li><a href='#story'>Developer Story</a></li>
                 <li><a href='resume.html'>Resume</a></li>
                 <li><a href='#portfolio'>Port Folio</a></li>
             </nav>
-            <div id='profile'>
-                <img class='max-pic' src='' alt='Profile Picture'>
+			<div id='profile'>
+			<img class="max-pic" src="images/profile 240 X 320.png" alt="Profile Picture">	
+			    
+                <!--<img class='max-pic' src='https://avatars.githubusercontent.com/u/62648127?s=460&u=cc9ade92b339ce7b93e4352d8ca86e94a2711d73&v=4' alt='Profile Picture'-->
             </div>
-            <div id='about'>
-                <span>"Hello world! this is Hariharan. "</span>
-                <h1>My Skills</h1>
-                <h3>Programming:<h3>
-<ul ><li ng-repeat="datum in data">{{ datum }}</li></ul>
+            <section id='about'>
+            <h1>Technical Skills</h1>
+                
+<h3>Programming:<h3>
 <div class="skills" >
 <div class="flex"><canvas id="c" width="200px" height="200px"></canvas>
 <div id="clab" class="lab"></div>
@@ -45,10 +52,8 @@
 <div class="flex">
 <canvas id="javaScript" width="200px" height="200px"></canvas>
 <div id="javaScriptlab" class="lab"></div>
-<span>JavaScript</span></div>
-<h3>Designing:</h3>
-<span>Adobe PhotoShop</span>
-<span>Inkscape </span>
+<span>JavaScript</span>
+</div>
 </div>
 
 </div>
@@ -60,11 +65,24 @@
             <div id='#resume'>
                 <h3>Resume</h3>
             </div>
-            <div id='#portfolio'>
-                <h3>Port Folio</h3>
-
-            </div>
-        </div>
+            <section class="block">
+                <h3 id="portfolio">Port Folio</h3>
+				<div class="projects">
+				<div class="project">
+				Project 1
+				<span class="description">This is my First Web Project 
+				Domestic Electricity Bill Calculator
+				This calculator Render a form with single input.
+				Input takes Units and shows how much to be paid by the Consumer by applying TNEB Tariff Regulations</span>
+				</div>
+				<div class="project">
+				Project 1
+				</div>
+				<div class="project">
+				Project 1
+				</div></section>
+			</section>
+          
         <div class="footer">
             <a href="https://www.facebook.com/hariharanhearts">Facebook</a>
             <a href="https://www.twitter.com/itz_mr_evil">Twitter</a>
@@ -72,114 +90,11 @@
             <a href="https://www.linkedin.com/in/hariharanu/">Linkedin</a>
             <a href="https://wa.me/+918807290807">Whatsapp</a>
             <a href="https://t.me/itz_mr_evil">Telegram</a>
-            </div>
-        <style>
-            #main{
-                display:flex;
-                flex-direction: column;
-                width:90%;
-                align-items:center;
-                background:rgba(84, 87, 241, 0.13);
-                margin:auto;
-                
-            }
-            .lab{
-                position:relative;
-                z-index: inherit 9999;
-                font-size:35px;
-            }
-            .flex{
-                display:flex;
-                align-items:center;
-                justify-content: center;
-            }
-            .skills{
-                display:flex;
-                flex-wrap:wrap;
-                flex-direction:row;
-            }
-            #title{text-align:center;}
-            .max-pic{
-                width:200px;
-                height:200px;
-                border:20px solid white;
-                border-radius:10% 0% 10%;
-                box-shadow:0px 0px 15px black;
-                position:relative;
-                margin:20px 0px;
-                align-self:left;
-                z-index:99999 !important;
-            }
-            #nav-bar{
-                display:flex;
-            }
-            #nav-bar li
-            {
-                display:inline-block;
-                margin:0px 10px;
-            }
-        </style>
-        <script>
-            window.onloadend=load();
-            var time=0;
-            
-            function load()
-            {
-            var time=0;
-            var timer=setInterval(function(){
-            time++;
-            if(time==10)
-            clearInterval(timer);
-            change('c',Math.round(86*time/10));
-            change('java',Math.round(56*time/10));
-            change('cpp',Math.round(65*time/10));
-            change('python',Math.round(37*time/10));
-            change('javaScript',Math.round(50*time/10));
-            },60);
-            }
-            function rotate(canvasid,angle)
-            {
-            var canvas=document.getElementById(canvasid);
-            var context=canvas.getContext('2d');
-            
-            }
-            function change(canvasid,value)
-            {
-            var canvas=document.getElementById(canvasid);
-            var context=canvas.getContext('2d');
-            context.clearRect(0,0,canvas.width,canvas.height,false);
-            var x=canvas.width/2;
-            var y=canvas.height/2;
-            var radius=70;
-            var startAngle=0;
-            var endAngle=Math.PI*2*(value/100);
-            document.getElementById(canvasid+"lab").innerHTML=value+"%";
-            var counterClockwise=false;
-            context.beginPath();
-            context.arc(x,y,radius-5,0,Math.PI*2,counterClockwise);
-            context.strokeStyle='gray';
-            context.lineWidth=20;
-            context.stroke();
-            context.closePath();
-            context.beginPath();
-            context.arc(x,y,radius,startAngle,endAngle,counterClockwise);
-            context.strokeStyle='crimson';
-            context.lineWidth=15;
-            context.stroke();
-            context.closePath();
-            }
-            
-            </script>
-            <script>
-        
-                var app=angular.module("myapp",[]);
-                app.controller("myctrl",function($scope)
-                    {
-                   $scope.data=["C","C++","Java"];
-                });
-            </script>
-            
-                        
+        </div>
     </body>
+	<script>
+	var navbar=document.querySelector("#nav-bar");
+	</script>
+	<script src="index.js"></script>
 </html>
 

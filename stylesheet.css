@@ -5,6 +5,7 @@
 	--g3:linear-gradient(to left,green,orange,yellow,orange,green);
 	--g4:linear-gradient(72deg,red,orange,yellow,orange,green);
 }
+
 .cursive{
 	font-family:cursive;
 }
@@ -12,7 +13,7 @@
 	text-align:center;
 }
 .card{
-	background:url("C:/Users/elcot/pictures/label.png");
+	background:url("icons/label.png");
 	background-size:100% auto;
 	background-position:0 35px;
 	background-repeat:no-repeat;
@@ -272,4 +273,5 @@ font-family:cursive;
 		width:100%;
 		border-radius:50%;
 		}
+
 }
