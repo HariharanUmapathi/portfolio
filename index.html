@@ -1,8 +1,8 @@
 <html>
     <head>
         <title>Port Folio</title>
-		
 		<link href="index.css" rel="stylesheet"/>
+		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width,initial-scale=1.0" />
 		<meta name="Author" content="Hariharan" />
         <!--<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js'></script>-->
@@ -15,11 +15,14 @@
             <div id='title'>
                 <h3>Web Developer | Programmer | Math Lover</h3>
             </div>
-            <nav id='nav-bar' >
-                <li><a href='#about'>About</a></li>
+            
+			<nav id='nav-bar' >
+			<button class="close" onclick="closemenu()">Close</button>
+                <ul><li><a href='#about'>About</a></li>
                 <li><a href='#story'>Developer Story</a></li>
                 <li><a href='resume.html'>Resume</a></li>
                 <li><a href='#portfolio'>Port Folio</a></li>
+				</ul>
             </nav>
 			<div id='profile'>
 			<img class="max-pic" src="images/profile 240 X 320.png" alt="Profile Picture">	
@@ -27,56 +30,69 @@
                 <!--<img class='max-pic' src='https://avatars.githubusercontent.com/u/62648127?s=460&u=cc9ade92b339ce7b93e4352d8ca86e94a2711d73&v=4' alt='Profile Picture'-->
             </div>
             <section id='about'>
-            <h1>Technical Skills</h1>
+<h1>Technical Skills</h1>
                 
-<h3>Programming:<h3>
+<h3>Programming:</h3>
 <div class="skills" >
-<div class="flex"><canvas id="c" width="200px" height="200px"></canvas>
+
+<div class="flex">
+<canvas id="c" width="200px" height="200px"></canvas>
 <div id="clab" class="lab"></div>
 <span>C</span></div> 
-
-<div class="flex"><canvas id="java" width="200px" height="200px"></canvas>
+<div class="flex">
+<canvas id="java" width="200px" height="200px"></canvas>
 <div id="javalab" class="lab"></div>
 <span>Java</span></div>
-
 <div class="flex">
 <canvas id="cpp" width="200px" height="200px"></canvas>
 <div id="cpplab" class="lab"></div>
 <span>CPP</span></div>
-
 <div class="flex">
 <canvas id="python" width="200px" height="200px"></canvas>
 <div id="pythonlab" class="lab"></div>
 <span>Python</span></div>
-
 <div class="flex">
 <canvas id="javaScript" width="200px" height="200px"></canvas>
 <div id="javaScriptlab" class="lab"></div>
-<span>JavaScript</span>
+<span>Java Script</span>
 </div>
 </div>
 
 </div>
 
             </div>
-            <div id='#story'>
+            <section id='#story'>
                 <h3>Story</h3>
-            </div>
-            <div id='#resume'>
-                <h3>Resume</h3>
-            </div>
+            </section>
             <section class="block">
                 <h3 id="portfolio">Port Folio</h3>
 				<div class="projects">
 				<div class="project">
-				Project 1
-				<span class="description">This is my First Web Project 
+				<span class="title"><a href='http://projects.hariharan.epizy.com/ebilcalc'>Domestic Electricity Bill Calculator</a></span>
+				<p class="description">This is my First Web Project 
 				Domestic Electricity Bill Calculator
 				This calculator Render a form with single input.
-				Input takes Units and shows how much to be paid by the Consumer by applying TNEB Tariff Regulations</span>
+				Input takes Units and shows how much to be paid by the Consumer by applying TNEB Tariff Regulations</p>
+				<img src="" alt="Thubmnail" />
 				</div>
 				<div class="project">
-				Project 1
+				<span class='title'><a  href="https://www.hariharanumapathi.github.io/cgpacalc">CGPA Calculator</a></span>
+				<p class="description">
+				This Projects Calculates cgpa for you.
+				It Takes Inputs 
+				<ul>
+				<li>Subject Count</li>
+				<li>Subject Codes </li>
+				<li>Internal Assessment Marks </li>
+				<li>External Assessment Marks</li>
+				<li>Part</li>
+				<li>Semester Number</li>
+				<li>Max Marks For Internal</li>
+				<li>Total Marks</li>
+				</ul>
+				It Shows the CGPA by Semester Wise and Part Wise
+				
+				</p>
 				</div>
 				<div class="project">
 				Project 1
@@ -84,12 +100,12 @@
 			</section>
           
         <div class="footer">
-            <a href="https://www.facebook.com/hariharanhearts">Facebook</a>
-            <a href="https://www.twitter.com/itz_mr_evil">Twitter</a>
-            <a href="https://www.instagram.com/itz_mr_evil">Instagram</a><br>
-            <a href="https://www.linkedin.com/in/hariharanu/">Linkedin</a>
-            <a href="https://wa.me/+918807290807">Whatsapp</a>
-            <a href="https://t.me/itz_mr_evil">Telegram</a>
+            <a href="https://www.facebook.com/hariharanhearts" ><img src="icons/facebook.png" class="social"></a>
+            <a href="https://www.twitter.com/itz_mr_evil"><img src='icons/twitter.webp' class="social"/></a></a>
+            <a href="https://www.instagram.com/itz_mr_evil"><img src="icons/instagram.png" class="social"></a></a>
+            <a href="https://www.linkedin.com/in/hariharanu/"><img src="icons/linkedin.png" class="social"></a></a>
+            <a href="https://wa.me/+918807290807"><img src="icons/whatsapp.png" class="social"></a></a>
+            <a href="https://t.me/itz_mr_evil"><img src='icons/telegram.webp' class="social"/></a>
         </div>
     </body>
 	<script>

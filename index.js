@@ -64,3 +64,8 @@ if(yr!=null)
 console.log("Script Loaded");
 var ar=document.querySelectorAll(".lab");
 ar.forEach((e)=>{e.style.padding="10px";e.style.position="absolute"})
+var sicon=document.querySelectorAll(".social");
+sicon.forEach((e)=>{e.style.width="25px";e.style.height="25px;"})
+function closemenu(){
+navbar.className="hide";	
+}
